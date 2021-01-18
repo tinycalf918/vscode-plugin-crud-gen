@@ -1,0 +1,1 @@
+# vscode-plugin-crud-gen
