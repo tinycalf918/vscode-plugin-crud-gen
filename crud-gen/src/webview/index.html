@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cat Coding</title>
+    </head>
+    <body>
+        <input type="text" id="first" />
+        <button id="submit">submit</button>
+    </body>
+    <script>
+        const vscode = acquireVsCodeApi();
+        let firstInput = document.querySelector("#first");
+        let submitButton = document.querySelector("#submit");
+
+        submitButton.addEventListener("click", event=>{
+            vscode.postMessage({
+                command: 'alert',
+                text: firstInput.value
+            })
+        })
+    </script>
+</html>
